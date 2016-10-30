@@ -6,4 +6,8 @@
   {{ .Content }}
 </div>
 
+{{ if .Site.DisqusShortname }}
+  {{ template "_internal/disqus.html" . }}
+{{ end }}
+
 {{ partial "default_foot.html" . }}
